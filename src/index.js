@@ -5,9 +5,9 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 import roootRecucers from "./reducers";
-import { addItemById, addItemToBasket } from "./actions";
-import 'font-awesome/css/font-awesome.min.css';
-import 'tachyons';
+import { addItemToBasket } from "./actions";
+import "font-awesome/css/font-awesome.min.css";
+import "tachyons";
 
 const store = createStore(
   roootRecucers,

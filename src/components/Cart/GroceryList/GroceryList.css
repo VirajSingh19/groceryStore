@@ -1,0 +1,7 @@
+.glist {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column; 
+  padding: 2%;
+}
+

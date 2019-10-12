@@ -1,0 +1,37 @@
+.groceryItem {
+  display: flex;
+  border: 2px solid black;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background: #efefef; */
+  /* background: #fff; */
+  text-align: center;
+  margin: 1%;
+}
+
+.gbutton {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  color: lightgray;
+  padding: 1px 4px 1px 4px;
+  margin: 0% 4% 0% 4%;
+}
+
+.groceryItem:hover .gbutton {
+  color: green;
+  border-color: green;
+}
+
+
+
+.gtext {
+  padding: 2px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .groceryItem {
+    align-items: center;
+  }
+}

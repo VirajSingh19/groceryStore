@@ -1,0 +1,34 @@
+.basketItem {
+  display: flex;
+  border: 2px solid black;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background: #efefef; */
+  /* background: #fff; */
+  text-align: center;
+  margin: 1%;
+}
+
+.bbutton {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  color: lightgray;
+  padding: 1px 4px 1px 4px;
+  margin: 0% 4% 0% 4%;
+}
+
+.basketItem:hover .bbutton {
+  color: red;
+  border-color: red;
+}
+
+.btext {
+  padding: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .basketItem {
+    align-items: center;
+  }
+}

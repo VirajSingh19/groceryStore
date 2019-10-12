@@ -1,3 +1,20 @@
 .cart {
   background: white;
+  border: 2px solid blue;
+  display: grid;
+  grid-template-areas:
+    "search search"
+    "grocery basket";
+}
+
+.search {
+  grid-area: search;
+} 
+
+.grocery {
+  grid-area: grocery;
+}
+
+.basket {
+  grid-area: basket;
 }
