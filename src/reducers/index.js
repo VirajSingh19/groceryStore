@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import groceriesJson from "../data/Groceries.json";
-import { ADD_TO_BASKET, SEARCH_GROCERY } from "../actions";
+import { ADD_TO_BASKET, SEARCH_GROCERY, EMPTY_BASKET } from "../actions";
 
 /**
  * this reducer creates store for grocery list
@@ -28,6 +28,8 @@ function basket(state = [], action) {
   switch (action.type) {
     case ADD_TO_BASKET:
       return addToBasket(action.id, action.name, state);
+    case EMPTY_BASKET:
+      return [];
     default:
       return state;
   }

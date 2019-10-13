@@ -1,8 +1,9 @@
 export const ADD_TO_BASKET = "ADD_TO_BASKET";
 export const SEARCH_GROCERY = "SEARCH_GROCERY";
+export const EMPTY_BASKET = "EMPTY_BASKET";
 
 /**
- * action to search items in grocery list
+ * @returns action to search items in grocery list
  * @param {Number} id - id of the item to be searched
  */
 export function searchGrocery(text) {
@@ -13,11 +14,28 @@ export function searchGrocery(text) {
   return action;
 }
 
+/**
+ * @returns action to add item to basket from grocery list
+ * @param {Number} id - item.id
+ * @param {String} name item.name
+ */
 export function addItemToBasket(id, name) {
   const action = {
     type: ADD_TO_BASKET,
     id,
     name,
+  };
+  return action;
+}
+
+/**
+ * @returns action to add item to basket from grocery list
+ * @param {Number} id - item.id
+ * @param {String} name item.name
+ */
+export function emptyBasket() {
+  const action = {
+    type: EMPTY_BASKET,
   };
   return action;
 }

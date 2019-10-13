@@ -2,6 +2,7 @@ import React from "react";
 import "./BasketList.css";
 import BasketItem from "./BasketItem/BasketItem";
 import { connect } from "react-redux";
+import { emptyBasket } from "../../../actions";
 
 class Basket extends React.Component {
   render() {
@@ -9,9 +10,18 @@ class Basket extends React.Component {
 
     return (
       <div className="blist">
-        <h3>
-          <i className="fa fa-shopping-basket" aria-hidden="true"></i> Basket
-        </h3>
+        <div className="heading">
+          <h3>
+            {" "}
+            <i className="fa fa-shopping-basket" aria-hidden="true" /> Basket
+          </h3>
+          <p
+            onClick={() => this.props.emptyBasket()}
+            className="empty dim f6 red grow"
+          >
+            Empty
+          </p>
+        </div>
         <br />
         <br />
         <div className="bListItems">
@@ -41,5 +51,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  null
+  { emptyBasket }
 )(Basket);

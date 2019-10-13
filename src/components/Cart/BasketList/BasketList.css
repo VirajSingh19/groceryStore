@@ -4,3 +4,12 @@
   flex-direction: column;
   padding: 2%;
 }
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty {
+
+}
