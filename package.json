@@ -2,7 +2,7 @@
   "name": "task1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://virajSingh19.github.io/groceryStore",
+  "homepage": "http://virajsingh19.github.io/groceryStore",
   "dependencies": {
     "font-awesome": "^4.7.0",
     "gh-pages": "^2.1.1",
