@@ -6,14 +6,25 @@ class BasketItem extends React.Component {
     return (
       <div
         style={
-          this.props.id % 2 === 0
+          this.props.index % 2 === 0
             ? { background: "#efefef" }
             : { background: "#fff" }
         }
         className="basketItem pa2"
       >
         <div className="bbutton grow"> - </div>
-        <div className="btext f4"> {this.props.name} </div>
+        <div className="count"> {this.props.count} </div>
+        <div
+          style={
+            this.props.purchased
+              ? { textDecorationLine: "line-through" }
+              : { textDecorationLine: "none" }
+          }
+          className="btext f4"
+        >
+          {" "}
+          {this.props.name}{" "}
+        </div>
       </div>
     );
   }

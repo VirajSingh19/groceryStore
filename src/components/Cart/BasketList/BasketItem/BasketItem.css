@@ -27,6 +27,10 @@
   padding: 2px;
 }
 
+.count {
+  margin-right: 4px;
+}
+
 @media only screen and (max-width: 600px) {
   .basketItem {
     align-items: center;

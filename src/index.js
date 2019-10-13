@@ -5,7 +5,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 import roootRecucers from "./reducers";
-import { addItemToBasket } from "./actions";
+//import { addItemToBasket } from "./actions";
 import "font-awesome/css/font-awesome.min.css";
 import "tachyons";
 
@@ -17,7 +17,7 @@ console.log(store.getState());
 store.subscribe(() => console.log("store", store.getState()));
 
 //store.dispatch(addItemById(2));
-store.dispatch(addItemToBasket(2));
+//store.dispatch(addItemToBasket(2));
 
 ReactDOM.render(
   <Provider store={store}>

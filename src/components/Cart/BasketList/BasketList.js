@@ -15,9 +15,18 @@ class Basket extends React.Component {
         <br />
         <br />
         <div className="bListItems">
-          {this.props.Basket.map(item => (
-            <BasketItem key={item.id} id={item.id} name={item.name} />
-          ))}
+          {this.props.Basket.map((item, index) => {
+            return (
+              <BasketItem
+                key={item.id}
+                id={item.id}
+                count={item.count}
+                purchased={item.purchased}
+                name={item.name}
+                index={index}
+              />
+            );
+          })}
         </div>
       </div>
     );

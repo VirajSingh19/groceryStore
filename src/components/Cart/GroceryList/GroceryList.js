@@ -13,9 +13,16 @@ class Grocery extends React.Component {
         <br />
         <br />
         <div className="gListItems">
-          {this.props.Groceries.map(item => (
-            <GroceryItem key={item.id} id={item.id} name={item.name} />
-          ))}
+          {this.props.Groceries.map((item, index) => {
+            return (
+              <GroceryItem
+                key={item.id}
+                index={index}
+                id={item.id}
+                name={item.name}
+              />
+            );
+          })}
         </div>
       </div>
     );
