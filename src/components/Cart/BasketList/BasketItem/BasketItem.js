@@ -1,10 +1,13 @@
 import React from "react";
 import "./BasketItem.css";
+import { connect } from "react-redux";
+import { toggleItem } from "../../../../actions";
 
 class BasketItem extends React.Component {
   render() {
     return (
       <div
+        onClick={() => this.props.toggleItem(this.props.id)}
         style={
           this.props.index % 2 === 0
             ? { background: "#efefef" }
@@ -30,4 +33,7 @@ class BasketItem extends React.Component {
   }
 }
 
-export default BasketItem;
+export default connect(
+  null,
+  { toggleItem }
+)(BasketItem);

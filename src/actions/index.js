@@ -1,7 +1,7 @@
 export const ADD_TO_BASKET = "ADD_TO_BASKET";
 export const SEARCH_GROCERY = "SEARCH_GROCERY";
 export const EMPTY_BASKET = "EMPTY_BASKET";
-
+export const TOGGLE_PURCHASE = "TOGGLE_PURCHASE";
 /**
  * @returns action to search items in grocery list
  * @param {Number} id - id of the item to be searched
@@ -29,13 +29,23 @@ export function addItemToBasket(id, name) {
 }
 
 /**
- * @returns action to add item to basket from grocery list
- * @param {Number} id - item.id
- * @param {String} name item.name
+ * @returns action to empty basket
  */
 export function emptyBasket() {
   const action = {
     type: EMPTY_BASKET,
+  };
+  return action;
+}
+
+/**
+ * @returns action to mark item as purchased
+ * @param {Number} id - item.id
+ */
+export function toggleItem(id) {
+  const action = {
+    type: TOGGLE_PURCHASE,
+    id,
   };
   return action;
 }

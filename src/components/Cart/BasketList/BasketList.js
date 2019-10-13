@@ -15,12 +15,12 @@ class Basket extends React.Component {
             {" "}
             <i className="fa fa-shopping-basket" aria-hidden="true" /> Basket
           </h3>
-          <p
+
+          <i
             onClick={() => this.props.emptyBasket()}
-            className="empty dim f6 red grow"
-          >
-            Empty
-          </p>
+            className="red dim grow empty fa fa-trash"
+            aria-hidden="true"
+          ></i>
         </div>
         <br />
         <br />
