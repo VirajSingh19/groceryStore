@@ -5,6 +5,13 @@ import Cart from "./Cart/Cart";
 import Footer from "./Footer/Footer";
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      filter: "all",
+    };
+  }
+
   render() {
     return (
       <div className="main">
@@ -12,7 +19,7 @@ class App extends React.Component {
 
         <Cart />
 
-        <Footer />
+        <Footer filter={this.state.filter} />
       </div>
     );
   }

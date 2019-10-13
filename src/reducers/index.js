@@ -5,6 +5,7 @@ import {
   SEARCH_GROCERY,
   EMPTY_BASKET,
   TOGGLE_PURCHASE,
+  CHANGE_SECTION,
 } from "../actions";
 
 /**
@@ -48,6 +49,15 @@ function basket(state = [], action) {
   }
 }
 
+function section(state = "all", action) {
+  switch (action.type) {
+    case CHANGE_SECTION:
+      return action.section;
+    default:
+      return state;
+  }
+}
+
 /**
  * utility function for adding item to basket
  * @param {Number} id
@@ -67,6 +77,7 @@ function addToBasket(id, name, state) {
 const rootReducer = combineReducers({
   basket,
   groceries,
+  section,
 });
 
 export default rootReducer;
