@@ -10,25 +10,10 @@ import { ADD_TO_BASKET, SEARCH_GROCERY } from "../actions";
 function groceries(state = groceriesJson, action) {
   switch (action.type) {
     case SEARCH_GROCERY:
-      // for (let item of state) {
-
-      //   console.log(action.text);
-      // }
-      console.log("action", action.text);
-
-      // if (action.text === "") {
-      //   console.log("returned json");
-      //   return [...state, groceriesJson];
-      // }
-
-      const z = state.filter(item => {
-        const regeEx = new RegExp(action.text, "i"); // regex based filtering on names
-        if (item.name.match(regeEx)) return item;
+      return groceriesJson.filter(item => {
+        // regex search on items
+        if (item.name.match(new RegExp(action.text, "i"))) return item;
       });
-
-      console.log("returned ", z);
-
-      return z;
     default:
       return state;
   }
