@@ -49,6 +49,8 @@ function basket(state = [], action) {
   }
 }
 
+function purchased(state = [], action) {}
+
 function section(state = "all", action) {
   switch (action.type) {
     case CHANGE_SECTION:

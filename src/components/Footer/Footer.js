@@ -6,7 +6,7 @@ import { changeSection } from "../../actions";
 class Footer extends React.Component {
   render() {
     const { Section, changeSection } = this.props;
-    console.log("footer props", this.props, "section:", Section);
+    //console.log("footer props", this.props, "section:", Section);
     return (
       <div className="footer">
         <p

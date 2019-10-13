@@ -14,7 +14,7 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 console.log(store.getState());
-store.subscribe(() => console.log("store", store.getState()));
+//store.subscribe(() => console.log("store", store.getState()));
 
 //store.dispatch(addItemById(2));
 //store.dispatch(addItemToBasket(2));

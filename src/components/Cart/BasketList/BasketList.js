@@ -6,8 +6,8 @@ import { emptyBasket } from "../../../actions";
 
 class Basket extends React.Component {
   render() {
-    console.log("basket", this.props.Basket);
-
+    //console.log("basket", this.props.Basket, this.props.section);
+    const { section } = this.props;
     return (
       <div className="blist">
         <div className="heading">
@@ -25,18 +25,48 @@ class Basket extends React.Component {
         <br />
         <br />
         <div className="bListItems">
-          {this.props.Basket.map((item, index) => {
-            return (
-              <BasketItem
-                key={item.id}
-                id={item.id}
-                count={item.count}
-                purchased={item.purchased}
-                name={item.name}
-                index={index}
-              />
-            );
-          })}
+          {section === "all"
+            ? this.props.Basket.map((item, index) => {
+                return (
+                  <BasketItem
+                    key={item.id}
+                    id={item.id}
+                    count={item.count}
+                    purchased={item.purchased}
+                    name={item.name}
+                    index={index}
+                  />
+                );
+              })
+            : section === "pending"
+            ? this.props.Basket.filter(item => !item.purchased).map(
+                (item, index) => {
+                  return (
+                    <BasketItem
+                      key={item.id}
+                      id={item.id}
+                      count={item.count}
+                      purchased={item.purchased}
+                      name={item.name}
+                      index={index}
+                    />
+                  );
+                }
+              )
+            : this.props.Basket.filter(item => item.purchased).map(
+                (item, index) => {
+                  return (
+                    <BasketItem
+                      key={item.id}
+                      id={item.id}
+                      count={item.count}
+                      purchased={item.purchased}
+                      name={item.name}
+                      index={index}
+                    />
+                  );
+                }
+              )}
         </div>
       </div>
     );
@@ -46,6 +76,7 @@ class Basket extends React.Component {
 function mapStateToProps(state) {
   return {
     Basket: state.basket,
+    section: state.section,
   };
 }
 
