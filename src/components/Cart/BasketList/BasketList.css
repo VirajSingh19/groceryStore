@@ -1,15 +1,30 @@
 .blist {
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
-  padding: 2%;
+  padding: 5%;
+  align-items: center;
 }
 
 .heading {
   display: flex;
   justify-content: space-between;
+  width: 48%;
+
 }
 
-.empty {
-  opacity: 2;
+.bListItems {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .blist {
+    padding: 1px;
+  }
+  .heading {
+    width: 100%;
+  }
 }

@@ -1,5 +1,4 @@
 .search {
-  border: 2px solid gainsboro;
   display: flex;
   justify-content: center;
 }
@@ -9,5 +8,5 @@
   color: black;
   border: 2px solid red;
   border-radius: 5px;
-  padding: 2%;
+  padding: 1.5%;
 }

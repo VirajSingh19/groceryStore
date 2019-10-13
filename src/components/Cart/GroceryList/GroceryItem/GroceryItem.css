@@ -1,13 +1,12 @@
 .groceryItem {
   display: flex;
-  border: 2px solid black;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
-  /* background: #efefef; */
-  /* background: #fff; */
+  padding:1px;
   text-align: center;
-  margin: 1%;
+  margin: 1% 0% 1% 0%;
+  width:48%;
 }
 
 .gbutton {
@@ -30,5 +29,7 @@
 @media only screen and (max-width: 600px) {
   .groceryItem {
     align-items: center;
+    padding: 0;
+    width: 100%;
   }
 }

@@ -15,10 +15,10 @@ class GroceryItem extends React.Component {
             ? { background: "#efefef" }
             : { background: "#fff" }
         }
-        className="groceryItem pa2"
+        className="groceryItem shadow-1"
       >
         <div className="gbutton grow"> + </div>
-        <div className="gtext f4"> {this.props.name} </div>
+        <div className="gtext"> {this.props.name} </div>
       </div>
     );
   }

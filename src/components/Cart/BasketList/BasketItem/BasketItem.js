@@ -13,7 +13,7 @@ class BasketItem extends React.Component {
             ? { background: "#efefef" }
             : { background: "#fff" }
         }
-        className="basketItem pa2"
+        className="basketItem shadow-1"
       >
         <div className="bbutton grow"> - </div>
         <div className="count"> {this.props.count} </div>

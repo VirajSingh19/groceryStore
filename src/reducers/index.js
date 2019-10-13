@@ -49,8 +49,11 @@ function basket(state = [], action) {
   }
 }
 
-function purchased(state = [], action) {}
-
+/**
+ * this reducer is for switching sections namely 'all', 'pending', 'purchased' section
+ * @param {String} state
+ * @param {Object} action
+ */
 function section(state = "all", action) {
   switch (action.type) {
     case CHANGE_SECTION:
